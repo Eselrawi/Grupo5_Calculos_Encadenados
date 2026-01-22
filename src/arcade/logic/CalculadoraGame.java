@@ -35,13 +35,16 @@ public class CalculadoraGame {
         }
     }
 
-    private int calcular(int n1, int n2, String op) {
-        return switch (op) {
-            case "+" -> n1 + n2;
-            case "-" -> n1 - n2;
-            case "*" -> n1 * n2;
-            default -> 0;
-        };
+    public int calcular(int n1, int n2, String op) {
+        if (op.equals("+")) {
+            return n1 + n2;
+        } else if (op.equals("-")) {
+            return n1 - n2;
+        } else if (op.equals("*")) {
+            return n1 * n2;
+        } else {
+            return 0;
+        }
     }
 
     public boolean validarRespuesta(int respuestaUsuario) {
