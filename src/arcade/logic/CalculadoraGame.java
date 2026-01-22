@@ -1,5 +1,5 @@
 package src.arcade.logic;
-
+.
 import java.util.Random;
 
 public class CalculadoraGame {
