@@ -1,0 +1,29 @@
+ ## Juego 4: Cálculos Encadenados - Grupo 5
+
+¡Hola! Somos **Raúl y Marco**. Este es nuestro proyecto para la Sala Arcade. Hemos creado un juego de retos matemáticos donde no puedes fallar, porque cada resultado se usa para el siguiente cálculo.
+
+## Cómo ponerlo en marcha
+Es muy fácil, solo hay que seguir este orden en VS Code:
+
+1. ## Encender el Servidor:
+ Dale al Play en `CalculadoraServer.java`. Verás un mensaje diciendo que está esperando jugadores en el puerto 5000.
+2. ## Entrar a jugar:
+ Dale al Play en `CalculadoraClient.java`. El servidor te saludará con un `CALCENC LISTO`.
+3. ## ¡A jugar!: 
+Escribe los comandos en la consola del cliente para empezar el reto.
+
+## Comandos para la consola
+`NUEVA`: Para que el servidor te mande una operación.
+`RESPUESTA <numero>`: Para enviar tu solución (ej: `RESPUESTA 15`).
+`RESET`: Si quieres empezar de cero desde el principio.
+`SALIR`: Para cerrar el juego correctamente.
+
+## ¿Cómo funciona por dentro?
+Lo hemos montado de forma sencilla pero cumpliendo todo lo que nos han pedido:
+
+ ## La Lógica (POJO):
+ Todo lo que son las matemáticas están en `CalculadoraGame.java`. Es una clase "limpia" que no sabe nada de internet, solo de calcular y guardar el resultado anterior. La hemos probado con JUnit y funciona de 10.
+ ## El Servidor (Multihilo):
+ Está en `CalculadoraServer.java`. Hemos metido el "Handler" en el mismo archivo para que sea más cómodo de gestionar. Lo bueno es que es multihilo: podemos estar jugando Raúl y Marco a la vez desde terminales distintas y el servidor nos atiende a los dos sin mezclarse.
+ ## El Cliente:
+ Es el programa que usas tú para conectarte y enviar los comandos por texto plano.

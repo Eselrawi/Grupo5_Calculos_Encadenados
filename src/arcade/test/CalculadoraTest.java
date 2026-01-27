@@ -1,7 +1,7 @@
 package src.arcade.test;
 
 import src.arcade.logic.CalculadoraGame; 
-import static org.junit.Assert.*; // <--- ESTA ES LA LÍNEA MÁGICA
+import static org.junit.Assert.*; 
 import org.junit.Test;
 
 public class CalculadoraTest {
